@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Fragmento 1 -->
+    <View
+        android:id="@+id/fragment1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/holo_red_light"
+        app:layout_constraintBottom_toTopOf="@id/fragment3"
+        app:layout_constraintEnd_toStartOf="@id/fragment2"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="1" />
+
+    <!-- Fragmento 2 -->
+    <View
+        android:id="@+id/fragment2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/holo_blue_light"
+        app:layout_constraintStart_toEndOf="@id/fragment1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/fragment4"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="1" />
+
+    <!-- Fragmento 3 -->
+    <View
+        android:id="@+id/fragment3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/holo_green_light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment1"
+        app:layout_constraintEnd_toStartOf="@id/fragment4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintVertical_weight="1" />
+
+    <!-- Fragmento 4 -->
+    <View
+        android:id="@+id/fragment4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/holo_orange_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@id/fragment3"
+        app:layout_constraintTop_toBottomOf="@id/fragment2"
+        app:layout_constraintVertical_weight="1" />
+
+    <!-- TextViews y Buttons -->
+
+    <TextView
+        android:id="@+id/strengthText"
+        android:layout_width="124dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="16dp"
+        android:text="Strength"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/fragment1"
+        app:layout_constraintHorizontal_bias="0.528"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fragment1" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="124dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="16dp"
+        android:text="Defense"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/fragment3"
+        app:layout_constraintHorizontal_bias="0.528"
+        app:layout_constraintStart_toStartOf="@+id/fragment3"
+        app:layout_constraintTop_toBottomOf="@+id/fragment1" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="124dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="16dp"
+        android:text="Charge"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/fragment4"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toEndOf="@+id/fragment3"
+        app:layout_constraintTop_toBottomOf="@+id/fragment2" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="124dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="16dp"
+        android:text="Speed"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/fragment2"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toEndOf="@+id/fragment1"
+        app:layout_constraintTop_toTopOf="@+id/fragment2" />
+
+    <TextView
+        android:id="@+id/streghthNumber"
+        android:layout_width="107dp"
+        android:layout_height="67dp"
+        android:ems="10"
+        android:minHeight="48dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="@+id/fragment1"
+        app:layout_constraintEnd_toStartOf="@+id/atackPlus"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toEndOf="@+id/atackMinus"
+        app:layout_constraintTop_toBottomOf="@+id/strengthText"
+        app:layout_constraintVertical_bias="0.19"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/defenseNumber"
+        android:layout_width="107dp"
+        android:layout_height="67dp"
+        android:ems="10"
+        android:minHeight="48dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="@+id/fragment3"
+        app:layout_constraintEnd_toStartOf="@+id/defensePlus"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toEndOf="@+id/defenseMinus"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.19"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/chargeNumber"
+        android:layout_width="107dp"
+        android:layout_height="67dp"
+        android:ems="10"
+        android:minHeight="48dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="@+id/fragment4"
+        app:layout_constraintEnd_toStartOf="@+id/chargePlus"
+        app:layout_constraintHorizontal_bias="0.452"
+        app:layout_constraintStart_toEndOf="@+id/chargeMinus"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.25"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/speedNumber"
+        android:layout_width="107dp"
+        android:layout_height="67dp"
+        android:ems="10"
+        android:minHeight="48dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="60sp"
+        app:layout_constraintBottom_toBottomOf="@+id/fragment2"
+        app:layout_constraintEnd_toStartOf="@+id/speedPlus"
+        app:layout_constraintHorizontal_bias="0.574"
+        app:layout_constraintStart_toEndOf="@+id/speedMinus"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.19"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/atackMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="60dp"
+        android:text="-"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/fragment1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/defenseMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="-"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/fragment3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintVertical_bias="0.494" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/chargeMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="36dp"
+        android:text="-"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/fragment3"
+        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintVertical_bias="0.209" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/speedMinus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="-"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/fragment2"
+        app:layout_constraintStart_toEndOf="@+id/fragment1"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.417" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/atackPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:text="+"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/fragment1"
+        app:layout_constraintEnd_toEndOf="@+id/fragment1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.62" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/defensePlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:text="+"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/fragment3"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/chargePlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:text="+"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/speedPlus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:text="+"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/fragment2"
+        app:layout_constraintEnd_toEndOf="@+id/fragment2"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.417" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/reset"
+        android:layout_width="126dp"
+        android:layout_height="41dp"
+        android:background="#FFFFFF"
+        android:text="Reset"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
